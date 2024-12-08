@@ -1,0 +1,24 @@
+<div class="todo-container">
+    <button (click)="add()" class="add-btn">Add Todo</button>
+    <table border="1" class="todo-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let todo of todos">
+                <td>{{ todo.ID }}</td>
+                <td>{{ todo.NAME }}</td>
+                <td>{{ todo.DESCRIPTION }}</td>
+                <td>
+                    <button (click)="edit(todo.ID)">Edit</button>
+                    <button (click)="delete(todo.ID)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
